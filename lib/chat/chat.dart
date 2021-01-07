@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habr_scroll/home/users/selected_users.dart';
+import 'package:habr_scroll/home/users/user_list.dart';
 
 class Chat extends StatelessWidget {
   @override
@@ -22,7 +23,8 @@ class Chat extends StatelessWidget {
                       child: Text("${SelectedUsers.userList[index]}"),
                     ),
                   ),
-                  title: Text("Users"),
+                  title: Text(UserStore.userData[index].name),
+                  subtitle: Text(UserStore.userData[index].email),
                 ),
               ),
             );
